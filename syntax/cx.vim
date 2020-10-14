@@ -34,3 +34,11 @@ syntax match cxNumber "\v<\d*\.?\d+([Ee]-?)?\d+>"
 syntax match cxNumber "\v<0x\x+([Pp]-?)?\x+>"
 syntax match cxNumber "\v<0b[01]+>"
 syntax match cxNumber "\v<0o\o+>"
+
+" Match strings
+syntax region cxString start=/"/ skip=/\\"/ end=/"/ oneline contains=swiftInterpolatedWrapper
+
+" Set highlights
+
+highlight default link cxtring String
+highlight default link cxKeywords Keyword
