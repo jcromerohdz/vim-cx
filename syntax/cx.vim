@@ -40,5 +40,5 @@ syntax region cxString start=/"/ skip=/\\"/ end=/"/ oneline contains=swiftInterp
 
 " Set highlights
 
-highlight default link cxtring String
+highlight default link cxString String
 highlight default link cxKeywords Keyword
