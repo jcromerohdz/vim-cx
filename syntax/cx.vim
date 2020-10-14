@@ -38,7 +38,40 @@ syntax match cxNumber "\v<0o\o+>"
 " Match strings
 syntax region cxString start=/"/ skip=/\\"/ end=/"/ oneline contains=swiftInterpolatedWrapper
 
-" Set highlights
+" BOOLs
+syntax keyword cxBoolean
+      \ true
+      \ false
 
+" Operators
+syntax match cxOperator "\v\~"
+syntax match cxOperator "\v\s+!"
+syntax match cxOperator "\v\%"
+syntax match cxOperator "\v\^"
+syntax match cxOperator "\v\&"
+syntax match cxOperator "\v\*"
+syntax match cxOperator "\v-"
+syntax match cxOperator "\v\+"
+syntax match cxOperator "\v\="
+syntax match cxOperator "\v\|"
+syntax match cxOperator "\v\/"
+syntax match cxOperator "\v\<"
+syntax match cxOperator "\v\>"
+syntax match cxOperator "\v\?\?"
+
+" cxStructure
+syntax keyword cxStructure
+      \ struct
+
+" cxImports 
+syntax keyword cxImports package 
+
+
+" Set highlights
+
 highlight default link cxString String
 highlight default link cxKeywords Keyword
+highlight default link cxBoolean Boolean
+highlight default link cxOperator Operator
+highlight default link cxStructure Structure
+highlight default link cxImports Include
