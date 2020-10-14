@@ -68,7 +68,7 @@ syntax keyword cxImports package
 
 
 " Set highlights
-
+
 highlight default link cxString String
 highlight default link cxKeywords Keyword
 highlight default link cxBoolean Boolean
